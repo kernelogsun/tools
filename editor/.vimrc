@@ -32,3 +32,5 @@ set statusline+=%w
 set statusline+=%=
 set statusline+=[ENC=%{&fileencoding}]
 set statusline+=[LOW=%l/%L]
+set statusline+=[COL=%c]
+
