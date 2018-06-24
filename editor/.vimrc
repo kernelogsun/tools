@@ -21,3 +21,14 @@ set cinwords=if,else,while,do,for,switch,case
 set cindent
 syntax on
 "source ~/.exrc
+
+" stats bar
+set laststatus=2
+set statusline=%F
+set statusline+=%m
+set statusline+=%r
+set statusline+=%h
+set statusline+=%w
+set statusline+=%=
+set statusline+=[ENC=%{&fileencoding}]
+set statusline+=[LOW=%l/%L]
