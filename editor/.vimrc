@@ -34,3 +34,4 @@ set statusline+=[ENC=%{&fileencoding}]
 set statusline+=[LOW=%l/%L]
 set statusline+=[COL=%c]
 
+hi Search ctermfg=white ctermbg=44
