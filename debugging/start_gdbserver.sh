@@ -9,7 +9,7 @@ if [ -z ${domain} ]; then
         exit 1
 fi
 
-# if domain is stopped, start domain
+# if a domain is stopped, start domain
 virsh list --name | grep -x ${domain}
 if [ $? = 1 ]; then
         virsh list --all
