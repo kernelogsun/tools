@@ -11,6 +11,9 @@ set hidden
 set virtualedit=block
 set backspace=indent,eol,start
 set number
+set cursorline
+set cursorcolumn
+execute "set colorcolumn=".join(range(81, 9999), ',')
 
 " for C language
 set nocp incsearch
@@ -22,7 +25,7 @@ set cindent
 syntax on
 "source ~/.exrc
 
-" stats bar
+" status bar
 set laststatus=2
 set statusline=%F
 set statusline+=%m
@@ -34,4 +37,7 @@ set statusline+=[ENC=%{&fileencoding}]
 set statusline+=[LOW=%l/%L]
 set statusline+=[COL=%c]
 
+" color
 hi Search ctermfg=white ctermbg=44
+hi CursorColumn ctermfg=white ctermbg=black
+hi ColorColumn ctermfg=white ctermbg=black
