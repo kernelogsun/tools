@@ -1,41 +1,41 @@
-set title
-set ambiwidth=double
-set tabstop=8
-set expandtab
-set shiftwidth=8
-set smartindent
-set list
-set listchars=tab:>-,trail:-,extends:>,precedes:<,nbsp:%
-set nrformats-=octal
-set hidden
-set virtualedit=block
-set backspace=indent,eol,start
-set number
-set cursorline
-set cursorcolumn
+se title
+se ambiwidth=double
+se tabstop=8
+se expandtab
+se shiftwidth=8
+se smartindent
+se list
+se listchars=tab:>-,trail:-,extends:>,precedes:<,nbsp:%
+se nrformats-=octal
+se hidden
+se virtualedit=block
+se backspace=indent,eol,start
+se number
+se cursorline
+se cursorcolumn
 execute "set colorcolumn=".join(range(81, 9999), ',')
 
 " for C language
-set nocp incsearch
-set autoindent
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-"set formatoptions=tcgr
-set cindent
+se nocp incsearch
+se autoindent
+se cinoptions=:0,p0,t0
+se cinwords=if,else,while,do,for,switch,case
+"se formatoptions=tcgr
+se cindent
 syntax on
 "source ~/.exrc
 
 " status bar
-set laststatus=2
-set statusline=%F
-set statusline+=%m
-set statusline+=%r
-set statusline+=%h
-set statusline+=%w
-set statusline+=%=
-set statusline+=[ENC=%{&fileencoding}]
-set statusline+=[LOW=%l/%L]
-set statusline+=[COL=%c]
+se laststatus=2
+se statusline=%F
+se statusline+=%m
+se statusline+=%r
+se statusline+=%h
+se statusline+=%w
+se statusline+=%=
+se statusline+=[ENC=%{&fileencoding}]
+se statusline+=[LOW=%l/%L]
+se statusline+=[COL=%c]
 
 " color
 hi Search ctermfg=white ctermbg=44
