@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# before:
+#  $ ln -s [pull dir]/my_tools/useful/shs shs
+
+python -m SimpleHTTPServer ${1:-9999}
