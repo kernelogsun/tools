@@ -36,6 +36,7 @@ se statusline+=%=
 se statusline+=[ENC=%{&fileencoding}]
 se statusline+=[LOW=%l/%L]
 se statusline+=[COL=%c]
+se statusline+=[HEX=%02.2B]
 
 " color
 hi Search ctermfg=white ctermbg=44
