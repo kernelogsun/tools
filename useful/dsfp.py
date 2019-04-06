@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# 作成中 
+# TBD
+
 import os
 import re
 import sys
