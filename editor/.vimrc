@@ -1,7 +1,7 @@
 se title
 se ambiwidth=double
 se tabstop=4
-se expandtab
+"se expandtab
 se shiftwidth=4
 se smartindent
 se list
