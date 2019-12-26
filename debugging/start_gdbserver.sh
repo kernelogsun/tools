@@ -42,7 +42,7 @@ e.g.
 (*1) How to check a module address
 
      1. login guest os
-     2. modprobe xfs (if not load)
+     2. modprobe xfs (If not loaded)
      3. cat /sys/module/xfs/sections/.text
         0xffffffffc0e7f000
 
