@@ -1,0 +1,34 @@
+#!/bin/bash -x
+
+### Get the golang image,and its mount  ###
+ctr1=$(buildah from golang:alpine)
+mnt1=$(buildah mount $ctr1)
+
+### Copy the main.go file to $mnt1/go ### 
+cp main.go $mnt1/go
+
+### Build the hello binary file from main.go ###
+buildah run $ctr1 go build -o hello
+
+### Get the scratch image,and its mount ###
+ctr2=$(buildah from scratch)
+mnt2=$(buildah mount $ctr2)
+
+### Copy the hello binary file to $mnt2 ###
+cp $mnt1/go/hello $mnt2
+
+### Execute the hello binary When Runches $ctr2 container ###
+buildah config --cmd ./hello $ctr2
+
+### Commit the above into new image ###
+buildah commit $ctr2 multi-stage:latest
+
+### Unmount ###
+buildah unmount $ctr1 $ctr2
+
+### Delete a container ###
+buildah rm $ctr1 $ctr2
+
+### Verify runches new image ###
+podman images
+podman run multi-stage
